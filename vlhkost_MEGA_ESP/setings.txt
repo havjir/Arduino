@@ -1,0 +1,21 @@
+vlhkost_MEGA_ESP
+
+v.20190521
+
+watering_time:
+07:00
+07:30
+08:30
+
+18:00
+18:30
+19:00
+
+max_watering_duration = 180 sec
+
+max = 60
+half= 57
+min = 52
+
+
+
