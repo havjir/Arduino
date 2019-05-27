@@ -1,0 +1,16 @@
+WHITE LED Strip (0.75A):
+------------------------
+
+blue - GND
+brown - +12V
+
+
+RGB LED Strip:
+--------------
+
+green/yellow - G (0.21A)
+black - B (0.18A)
+brown - R (0.19A)
+gray - +12V
+
+
