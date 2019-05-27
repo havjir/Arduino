@@ -10,11 +10,11 @@ int read_hum_interval = 900; // Read Humidity interval [sec]
 
 int watering_time [] = {700, 730, 830, 1800, 1830, 1900}; // watering time HHMM
 
-int max_watering_duration = 180;  // Maximal watering time [sec]
+int max_watering_duration = 200;  // Maximal watering time [sec]
 
-int max_hum = 60;   // Optimal humidity [%] - No watering
-int half_hum = 57;  // Medium humidity  [%] - Half watering
-int low_hum = 52;   // Low humidity     [%] - Full watering
+int max_hum = 70;   // Optimal humidity [%] - No watering
+int half_hum = 60;  // Medium humidity  [%] - Half watering
+int low_hum = 50;   // Low humidity     [%] - Full watering
 
 double min_water_level = 8;  // Minimum level in water tank [cm]
 double water_tank_high = 43;  // The high of water tank from bottom to the sensor [cm]

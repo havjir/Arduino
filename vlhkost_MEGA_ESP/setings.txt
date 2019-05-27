@@ -13,9 +13,9 @@ watering_time:
 
 max_watering_duration = 180 sec
 
-max = 60
-half= 57
-min = 52
+max = 70
+half= 60
+min = 50
 
 
 
