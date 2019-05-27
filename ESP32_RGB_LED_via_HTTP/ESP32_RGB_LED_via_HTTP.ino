@@ -171,11 +171,11 @@ void loop() {
   client.flush();
 
   // Prepare the response
-  //String s = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html>\r\nGPIOs of RGB is now ";
-  //s += String(valR) +":" + String(valG) + ":" + String(valB);
-  //s += "</html>\n";
+  String s = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html>\r\nGPIOs of RGB is now ";
+  s += String(valR) +":" + String(valG) + ":" + String(valB);
+  s += "</html>\n";
 
-  String s = "HTTP/1.1 204 No Content\r\n";
+  //String s = "HTTP/1.1 204 No Content\r\n";
   //String s = "HTTP/1.1 200 OK\r\nAccess-Control-Allow-Origin: *\r\n";
 
   // Send the response to the client
