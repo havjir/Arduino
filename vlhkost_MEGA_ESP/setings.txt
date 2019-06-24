@@ -1,6 +1,6 @@
 vlhkost_MEGA_ESP
 
-v.20190521
+v.20190624
 
 watering_time:
 07:00
@@ -13,9 +13,9 @@ watering_time:
 
 max_watering_duration = 360 sec
 
-max = 75
-half= 60
-min = 50
+max = 80
+half= 65
+min = 55
 
 
 
