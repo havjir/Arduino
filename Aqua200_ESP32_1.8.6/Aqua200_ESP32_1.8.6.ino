@@ -215,6 +215,10 @@ void setup() {
   // Connect to Wi-Fi network with SSID and password
   if(DEBUG) {Serial.print("Connecting to ");}
   if(DEBUG) {Serial.println(ssid);}
+  //Disable power-saving mode
+  //WiFi.mode (WIFI_STA);
+  //Esp_wifi_set_ps (WIFI_PS_NONE);
+  
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
