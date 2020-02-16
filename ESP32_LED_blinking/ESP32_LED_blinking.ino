@@ -1,3 +1,4 @@
+// ESP23 moduke ESPESSIF ESP32-WROOM-32 (LED_PIN=2)
 int ledPin = 2;
 
 void setup()
@@ -14,4 +15,3 @@ void loop()
     digitalWrite(ledPin, LOW);
     delay(5000);
 }
-
