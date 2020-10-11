@@ -1,17 +1,17 @@
-#define DEBUG 0
+#define DEBUG 1
 
 // Load Wi-Fi library
 #include <WiFi.h>
-#include "Wire.h"
+#include <Wire.h>
 #include <credentials.h>
 
 // NTP - Time library
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
-#include <Time.h>
-#include <Timezone.h>
-#include <TimeLib.h>
+#include "Time.h"
+#include "Timezone.h"
+#include "TimeLib.h"
 
 TimeChangeRule CEST = {"CEST", Last, Sun, Mar, 2, +120};
 TimeChangeRule  CET = {"CET",  Last, Sun, Oct, 3, +60};
@@ -26,7 +26,7 @@ struct tm timeinfo;
 
 long NTPmillis_act = 0l;
 long NTPmillis_last = 0l;
-long rtcUpdateInterval = 10000; // RTC update from NTP interval in mili sec.
+long rtcUpdateInterval = 5000; // RTC update from NTP interval in mili sec.
 
 WiFiUDP ntpUDP;
 
@@ -289,10 +289,13 @@ void loop(){
     if((NTPmillis_act - NTPmillis_last) > rtcUpdateInterval){
        NTPmillis_last = NTPmillis_act;
        // Read RTCdata
+       if(DEBUG) {Serial.println("Update Time via NTP");}
+       timeClient.begin();
        timeClient.update();
        if( timeClient.getEpochTime() > 946684800l ) {  // Check if updated time > 1.1.2000
           utc=timeClient.getEpochTime();
           setTime(czCET.toLocal(utc));
+          sprintf(buffer,"%d.%d.%d %02d:%02d:%02d",day(),month(),year(),hour(),minute(),second());
           if(DEBUG) {printf("%s\n", buffer);}
        }
     }
